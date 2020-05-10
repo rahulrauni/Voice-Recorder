@@ -1,0 +1,2 @@
+include ':app', ':audiovisualizer'
+rootProject.name='audiorecord'

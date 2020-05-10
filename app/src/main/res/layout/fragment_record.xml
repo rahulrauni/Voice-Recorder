@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recordFragment">
+
+
+    <com.shuyu.waveview.AudioWaveView
+        android:id="@+id/audioWave"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_timer" />
+
+    <TextView
+        android:id="@+id/record_filename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Press the mic button \n to start recording"
+        android:textAlignment="center"
+        android:textColor="#d64571"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audioWave" />
+
+    <Chronometer
+        android:id="@+id/record_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:fontFamily="@font/open_sans_light"
+        android:textSize="64sp"
+        android:textColor="#d64571"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/record_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="192dp"
+        android:background="@android:color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/microphone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_filename" />
+
+    <ImageButton
+        android:id="@+id/record_listbtn"
+        android:layout_width="46dp"
+        android:layout_height="57dp"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/recorder_list_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/record_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/record_btn"
+        app:layout_constraintTop_toTopOf="@+id/record_btn" />
+
+    <TextView
+        android:id="@+id/postview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_bg"
+        android:padding="10dp"
+        android:text="Next-->"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/equView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Tap Rec Button to see the RecEqualizer"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#d64571"
+        app:layout_constraintEnd_toEndOf="@+id/audioWave"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/audioWave"
+        app:layout_constraintStart_toStartOf="@+id/audioWave"
+        app:layout_constraintTop_toTopOf="@+id/audioWave" />
+
+    <ImageView
+        android:id="@+id/pauseView"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="78dp"
+        android:src="@drawable/pause"
+        app:layout_constraintEnd_toStartOf="@+id/record_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/record_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
